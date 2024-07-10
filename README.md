@@ -29,6 +29,12 @@ This code visualizes global earthquake data using Plotly. It begins by importing
 ## mpl_squares.py
 This code uses Matplotlib to create a line plot of squared numbers. It begins by importing Matplotlib and setting a specific style ("fivethirtyeight"). It defines input_values as a list of x-axis values and squares as their corresponding squared values. The code then creates a figure and axis object, plots input_values against squares with a specified linewidth, and sets the title and labels for the chart. Finally, it adjusts the tick label sizes and displays the plot using plt.show().
 
+## python_repos.py
+This code makes an API call to GitHub to search for Python repositories sorted by stars, then prints the status code of the request. It stores the JSON response in a variable and prints the total number of repositories found. The code processes the response to explore information about the repositories, specifically printing out selected details such as name, owner, stars, URL, creation date, last update, and description for each repository returned by the search.
+
+## python_repos_visual.py
+This code makes an API call to GitHub to search for Python repositories sorted by stars and prints the status code of the request. It processes the response to extract repository names, URLs, star counts, and labels that include the owner's login and the repository description. Using this data, it creates a bar chart visualization with Plotly. The chart displays the most-starred Python projects on GitHub, where each bar represents a repository with hovertext showing additional details. The chart's appearance is customized with specific title fonts, axis labels, bar colors, and opacity settings, and the resulting plot is saved to an HTML file.
+
 ## random_walk.py
 This code defines a class RandomWalk that generates random walks in a 2D plane. Upon initialization, it sets the number of points for the walk (num_points) and initializes starting coordinates ((0, 0)). The get_step method randomly determines the direction and distance of a step. The fill_walk method calculates each point of the walk by continuously generating steps until the specified number of points (num_points) is reached. It ensures that steps do not result in the walker staying in place (x_step == 0 and y_step == 0), discarding such moves and recalculating new positions.
 
