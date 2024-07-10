@@ -7,6 +7,7 @@ Answers Exercise 15.1 of the book. The code generates a scatter plot using Matpl
 
 ## death_valley_highs_lows.py
 The code reads temperature data from a CSV file and plots the daily high and low temperatures for Death Valley in 2018 using Matplotlib. It first changes the working directory, opens the CSV file, and extracts the dates, high temperatures, and low temperatures. Missing data points are handled by printing a message. It then plots the high and low temperatures on the same graph, with high temperatures in red, low temperatures in blue, and the area between them shaded lightly. The plot is formatted with a title, labeled axes, and formatted date labels for clarity, and finally, the graph is displayed.
+
 ![temps_death_valley_2018](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/6b3e516e-bc91-4307-9b91-5e5404758c94)
 
 ## die.py
