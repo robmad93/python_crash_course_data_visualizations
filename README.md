@@ -65,3 +65,8 @@ Using Matplotlib, the code plots the daily rainfall data. It sets the plot style
 This code is similar to sikta_highs.py but incorporates both the daily high and low temperatures on the same graph. It sets the plot style to "bmh" (plt.style.use("bmh")), creates a figure and axis object, and plots the high temperatures in red and low temperatures in blue (ax.plot(dates, highs, c="red", alpha=0.5), ax.plot(dates, lows, c="blue", alpha=0.5)). The area between the high and low temperatures is filled with light blue (plt.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)). The plot is formatted with a title ("Daily high and low temperatures - 2018"), labeled axes, and adjusted tick labels for clarity (plt.title, plt.xlabel, fig.autofmt_xdate, plt.ylabel, plt.tick_params). Finally, the plot is displayed using plt.show().
 
 ![sikta_highs_lows_2018](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/9140e37d-c6f7-4abf-8d24-6233ea1e6b49)
+
+## wildfires_europe.py
+This code reads data from a CSV file named "MODIS_C6_1_Europe_7d.csv" into a pandas DataFrame (df). Using Plotly Express, it creates a density map on a Mapbox map, plotting wildfire data across Europe based on latitude and longitude coordinates. The intensity of each point is represented by the "frp" column (representing "Fire Radiative Power in MW"). The map is centered around latitude 42.83 and longitude -8.35, zoomed to level 8, and styled with an open street map style. Finally, it displays the interactive map.
+
+![wildfires_europe_week_1_july_2024](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/3d3c81a5-5e6d-43c4-bf48-2ab1dec17700)
