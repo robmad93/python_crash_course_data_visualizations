@@ -2,11 +2,13 @@
 My attempts at the exercises provided within the data visualizations project section (chapters 15–17) of the incredible resource "Python Crash course" by Eric Matthes. The functions of the python files are summarized below.
 
 ## cubes.py
-Answers Exercise 15.1 of the book. The code generates a scatter plot using Matplotlib, plotting the cubes of numbers from 1 to 5000. Each point's position corresponds to a number and its cube, with the color intensity of the points mapped to their cube values on a blue color scale. The plot is titled "Cubed Numbers," and the axes are labeled "Value" and "Cube of Value." The plot's tick labels are customized for better readability, and the axes' ranges are set to cover the values from 0 to 5000 for the x-axis and 0 to 130,000,000,000 for the y-axis.
+The code generates a scatter plot using Matplotlib, plotting the cubes of numbers from 1 to 5000. Each point's position corresponds to a number and its cube, with the color intensity of the points mapped to their cube values on a blue color scale. The plot is titled "Cubed Numbers," and the axes are labeled "Value" and "Cube of Value." The plot's tick labels are customized for better readability, and the axes' ranges are set to cover the values from 0 to 5000 for the x-axis and 0 to 130,000,000,000 for the y-axis.
 ![cubed_numbers_graph](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/fc06f835-a9a4-4e80-b1b6-24dbd86730be)
 
 ## death_valley_highs_lows.py
 The code reads temperature data from a CSV file and plots the daily high and low temperatures for Death Valley in 2018 using Matplotlib. It first changes the working directory, opens the CSV file, and extracts the dates, high temperatures, and low temperatures. Missing data points are handled by printing a message. It then plots the high and low temperatures on the same graph, with high temperatures in red, low temperatures in blue, and the area between them shaded lightly. The plot is formatted with a title, labeled axes, and formatted date labels for clarity, and finally, the graph is displayed.
+
+![temps_death_valley_2018](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/c74f7208-7c77-45bd-a7eb-1ac704012245)
 
 ## die.py
 This code defines a Die class to simulate a die roll. The class has an initializer method that defaults to a six-sided die but can accept any number of sides. The roll method returns a random integer between 1 and the number of sides, simulating the roll of the die.
@@ -21,7 +23,8 @@ This code reads earthquake data (eq_data_1_day_m1.json) and extracts the magnitu
 ## eq_world_map.py
 This code visualizes global earthquake data using Plotly. It begins by importing necessary modules and opening a JSON file containing earthquake data. After loading the JSON data and accessing earthquake dictionaries under the "features" key, it iterates through each earthquake to extract magnitude, longitude, latitude, and title information. These values are stored in separate lists (mags, lons, lats, hover_texts). It then maps the earthquake data onto a Scattergeo plot, where each earthquake is represented by a marker whose size and color reflect its magnitude. The resulting interactive plot is saved as an HTML file named "global_earthquakes.html".
 
-![eq_world_map](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/2dec5e86-9bae-4204-9fe4-f7d18b59a70f)
+![global_eqs](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/96058ba3-d849-4113-9676-15797db9c434)
+
 
 ## mpl_squares.py
 This code uses Matplotlib to create a line plot of squared numbers. It begins by importing Matplotlib and setting a specific style ("fivethirtyeight"). It defines input_values as a list of x-axis values and squares as their corresponding squared values. The code then creates a figure and axis object, plots input_values against squares with a specified linewidth, and sets the title and labels for the chart. Finally, it adjusts the tick label sizes and displays the plot using plt.show().
@@ -61,4 +64,4 @@ Using Matplotlib, the code plots the daily rainfall data. It sets the plot style
 ## sikta_highs_lows.py
 This code is similar to sikta_highs.py but incorporates both the daily high and low temperatures on the same graph. It sets the plot style to "bmh" (plt.style.use("bmh")), creates a figure and axis object, and plots the high temperatures in red and low temperatures in blue (ax.plot(dates, highs, c="red", alpha=0.5), ax.plot(dates, lows, c="blue", alpha=0.5)). The area between the high and low temperatures is filled with light blue (plt.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)). The plot is formatted with a title ("Daily high and low temperatures - 2018"), labeled axes, and adjusted tick labels for clarity (plt.title, plt.xlabel, fig.autofmt_xdate, plt.ylabel, plt.tick_params). Finally, the plot is displayed using plt.show().
 
-![sikta_highs_lows_2018](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/b1952213-1e44-49af-ab6a-f37f25bab15d)
+![sikta_highs_lows_2018](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/9140e37d-c6f7-4abf-8d24-6233ea1e6b49)
