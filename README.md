@@ -1,7 +1,6 @@
 ﻿# Python crash course data visualizations
-My attempts at the exercises provided within the data visualizations project section (chapters 15–17) of the incredible resource "Python Crash course" by Eric Matthes.
+My attempts at the exercises provided within the data visualizations project section (chapters 15–17) of the incredible resource "Python Crash course" by Eric Matthes. The functions of the python files are summarized below.
 
-## Python file code explanations
 ## cubes.py
 Answers Exercise 15.1 of the book. The code generates a scatter plot using Matplotlib, plotting the cubes of numbers from 1 to 5000. Each point's position corresponds to a number and its cube, with the color intensity of the points mapped to their cube values on a blue color scale. The plot is titled "Cubed Numbers," and the axes are labeled "Value" and "Cube of Value." The plot's tick labels are customized for better readability, and the axes' ranges are set to cover the values from 0 to 5000 for the x-axis and 0 to 130,000,000,000 for the y-axis.
 ![cubed_numbers_graph](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/fc06f835-a9a4-4e80-b1b6-24dbd86730be)
