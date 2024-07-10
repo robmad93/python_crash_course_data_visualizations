@@ -1,9 +1,4 @@
-import csv
-from datetime import datetime
 import os
-import matplotlib.pyplot as plt
-from plotly.graph_objs import Scattergeo, Layout
-from plotly import offline
 import pandas as pd
 import plotly.express as px
 
