@@ -35,6 +35,9 @@ This code makes an API call to GitHub to search for Python repositories sorted b
 ## python_repos_visual.py
 This code makes an API call to GitHub to search for Python repositories sorted by stars and prints the status code of the request. It processes the response to extract repository names, URLs, star counts, and labels that include the owner's login and the repository description. Using this data, it creates a bar chart visualization with Plotly. The chart displays the most-starred Python projects on GitHub, where each bar represents a repository with hovertext showing additional details. The chart's appearance is customized with specific title fonts, axis labels, bar colors, and opacity settings, and the resulting plot is saved to an HTML file.
 
+![most_starred_python_projects_github](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/3bb5e3f3-0ceb-4c63-8cec-6cb56aa11af4)
+
+
 ## random_walk.py
 This code defines a class RandomWalk that generates random walks in a 2D plane. Upon initialization, it sets the number of points for the walk (num_points) and initializes starting coordinates ((0, 0)). The get_step method randomly determines the direction and distance of a step. The fill_walk method calculates each point of the walk by continuously generating steps until the specified number of points (num_points) is reached. It ensures that steps do not result in the walker staying in place (x_step == 0 and y_step == 0), discarding such moves and recalculating new positions.
 
