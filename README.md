@@ -25,12 +25,28 @@ This code visualizes global earthquake data using Plotly. It begins by importing
 
 ![global_eqs](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/96058ba3-d849-4113-9676-15797db9c434)
 
+## hn_article.py
+This code makes an API call to retrieve data from a specific Hacker News item and stores the response. It prints the status code of the response, converts the response to a JSON dictionary, and then writes this data to a file named readable_hn_data.json in a readable format with an indentation of 4 spaces.
+
+## hn_submissions.py
+This code retrieves the top 30 stories from Hacker News using their API, processes each story to extract the title, link, and number of comments, and then sorts the stories by the number of comments. It creates a bar chart visualization using Plotly, where each bar represents a story with clickable links on the x-axis oriented horizontally, showing the number of comments on the y-axis, and finally saves the chart as an HTML file named hn_discussions.html.
+
+![most_active_discussions_on_Hacker_News](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/26c11204-c157-481e-ab3d-bf99bf436257)
+
+
+## javascript_repos.py
+This code makes an API call to GitHub to search for Javascript repositories sorted by stars, then prints the status code of the request. It stores the JSON response in a variable and prints the total number of repositories found. The code processes the response to explore information about the repositories, specifically printing out selected details such as name, owner, stars, URL, creation date, last update, and description for each repository returned by the search.
+
+## javascriptn_repos_visual.py
+This code makes an API call to GitHub to search for Javascript repositories sorted by stars and prints the status code of the request. It processes the response to extract repository names, URLs, star counts, and labels that include the owner's login and the repository description. Using this data, it creates a bar chart visualization with Plotly. The chart displays the most-starred Javascript projects on GitHub, where each bar represents a repository with hovertext showing additional details. The chart's appearance is customized with specific title fonts, axis labels, bar colors, and opacity settings, and the resulting plot is saved to an HTML file.
+
+![most_starred_js_projects_github](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/0ca72c7f-b948-4761-9c91-ab0758d8540c)
 
 ## mpl_squares.py
 This code uses Matplotlib to create a line plot of squared numbers. It begins by importing Matplotlib and setting a specific style ("fivethirtyeight"). It defines input_values as a list of x-axis values and squares as their corresponding squared values. The code then creates a figure and axis object, plots input_values against squares with a specified linewidth, and sets the title and labels for the chart. Finally, it adjusts the tick label sizes and displays the plot using plt.show().
 
 ## python_repos.py
-This code makes an API call to GitHub to search for Python repositories sorted by stars, then prints the status code of the request. It stores the JSON response in a variable and prints the total number of repositories found. The code processes the response to explore information about the repositories, specifically printing out selected details such as name, owner, stars, URL, creation date, last update, and description for each repository returned by the search.
+Similar to javascript_repos.py. This code makes an API call to GitHub to search for Python repositories sorted by stars, then prints the status code of the request. It stores the JSON response in a variable and prints the total number of repositories found. The code processes the response to explore information about the repositories, specifically printing out selected details such as name, owner, stars, URL, creation date, last update, and description for each repository returned by the search.
 
 ## python_repos_visual.py
 This code makes an API call to GitHub to search for Python repositories sorted by stars and prints the status code of the request. It processes the response to extract repository names, URLs, star counts, and labels that include the owner's login and the repository description. Using this data, it creates a bar chart visualization with Plotly. The chart displays the most-starred Python projects on GitHub, where each bar represents a repository with hovertext showing additional details. The chart's appearance is customized with specific title fonts, axis labels, bar colors, and opacity settings, and the resulting plot is saved to an HTML file.
@@ -74,6 +90,9 @@ Using Matplotlib, the code plots the daily rainfall data. It sets the plot style
 This code is similar to sikta_highs.py but incorporates both the daily high and low temperatures on the same graph. It sets the plot style to "bmh" (plt.style.use("bmh")), creates a figure and axis object, and plots the high temperatures in red and low temperatures in blue (ax.plot(dates, highs, c="red", alpha=0.5), ax.plot(dates, lows, c="blue", alpha=0.5)). The area between the high and low temperatures is filled with light blue (plt.fill_between(dates, highs, lows, facecolor="blue", alpha=0.1)). The plot is formatted with a title ("Daily high and low temperatures - 2018"), labeled axes, and adjusted tick labels for clarity (plt.title, plt.xlabel, fig.autofmt_xdate, plt.ylabel, plt.tick_params). Finally, the plot is displayed using plt.show().
 
 ![sikta_highs_lows_2018](https://github.com/robmad93/python_crash_course_data_visualizations/assets/131868277/9140e37d-c6f7-4abf-8d24-6233ea1e6b49)
+
+## test_python_repos.py
+This code defines a unittest test case class TestPythonRepos that tests the GitHub API's response for Python repositories sorted by stars. In the setUp method, it makes an API call to GitHub and stores the response. It includes three tests: test_status_code verifies the API call was successful by checking the status code, test_total_repositories ensures the total number of repositories is greater than a given number (currently set to 50,000), and test_number_of_items checks that the number of items returned in the response is 30. The tests are run when the script is executed.
 
 ## wildfires_europe.py
 This code reads data from a CSV file named "MODIS_C6_1_Europe_7d.csv" into a pandas DataFrame (df). The CSV file represents recent European wildfire data for the 1st week of July, 2024, obtained from https://firms.modaps.eosdis.nasa.gov/active_fire/. Using Plotly Express, the code creates a density map on a Mapbox map, plotting wildfire data across Europe based on latitude and longitude coordinates. The intensity of each point is represented by the "frp" column (representing "Fire Radiative Power in MW"). The map is centered around latitude 42.83 and longitude -8.35, zoomed to level 8, and styled with an open street map style. Finally, it displays the interactive map.
